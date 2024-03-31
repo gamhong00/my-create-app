@@ -6,13 +6,16 @@ import LifecycleComponent from './components/LifecycleComponent';
 import Counter2 from './components/Counter2';
 import Counter3 from './components/Counter3';
 import FetchAPI from './components/FetchAPI';
+import AxiosAPI from './components/AxiosAPI';
+
 function App() {
   return (
     <div className="App">
       {/* <Counter /> */}
       {/* <LifecycleComponent /> */}
       {/* {<Counter3/>} */}
-      <FetchAPI/>
+      {/* <FetchAPI/> */}
+      <AxiosAPI/>
     </div >
   );
 }

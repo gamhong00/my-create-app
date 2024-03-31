@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function FetchAPI() {
-    const [province, setProvince]= useState([]);
+    const [provinces, setProvinces]= useState([]);
     useEffect(()=>{
         fetch('https://vapi.vnappmob.com/api/province/')
         .then(function(response) {
@@ -13,7 +13,7 @@ function FetchAPI() {
         })
         .then(function(responseAsJson) {
         // Do stuff with the JSON
-        setProvince(responseAsJson.results)
+        setProvinces(responseAsJson.results)
         console.log(responseAsJson.results);
         })
         .catch(function(error) {
@@ -25,7 +25,7 @@ function FetchAPI() {
           <p>api province</p>
           <select>
             {
-                province.map((item, index)=>{
+                provinces.map((item, index)=>{
                     return <option value={item.province_id} key={index}>{item.province_name}</option>
                 })
             }
